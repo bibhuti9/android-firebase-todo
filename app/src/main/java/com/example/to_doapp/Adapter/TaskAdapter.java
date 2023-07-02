@@ -240,7 +240,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     public void deleteTask(int position) {
         TaskModel taskModel = taskList.get(position);
         String id = taskModel.getId();
-
         cancelAlarm(taskModel.getDate(), taskModel.getTime());
 
         deleteItemFromDB(id);
